@@ -1,0 +1,6 @@
+rastrear si copio o descargo la imagen de un producto
+rastrear si copio o descargo el texto de un producto
+que productos ven con el click
+que productos ven con el mouse over
+el tiempo en que un usuario ve un producto/pagina
+guardar las busquedas que hace el usuario
