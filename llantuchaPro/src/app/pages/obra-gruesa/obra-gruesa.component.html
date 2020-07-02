@@ -1,0 +1,156 @@
+<p>obra-gruesa works!</p>
+<div class="row" style="margin-right:0px;">
+  
+    <div class="col-2" style="padding-top: 60px">
+        <div class="dropdown">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+            Vendedores
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Coboce</a>
+            <a class="dropdown-item" href="#">Camba</a>
+            <a class="dropdown-item" href="#">Viacha</a>
+          </div>
+        </div>
+    </div>
+  
+    <div class="col-10">
+      <div class="row" style="padding-top:60px; padding-right: 0px ;margin-right:0px">
+        <div class="ventas col-sm-6 col-md-3 padding-0" id="1000" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
+          <h2>Cemento Coboce</h2>
+          <h5>Precio 500bs</h5>
+          <div class="fakeimg">Fake Image</div>
+          <p  class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
+        </div>
+        <div class="ventas col-sm-6 col-md-3 padding-0" id="1001" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
+          <h2>Cemento Coboce</h2>
+          <h5>Precio 500bs</h5>
+          <div class="fakeimg">Fake Image</div>
+          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
+        </div>
+        <div class="ventas col-sm-6 col-md-3 padding-0" id="1002" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
+          <h2>Cemento Coboce</h2>
+          <h5>Precio 500bs</h5>
+          <div class="fakeimg">Fake Image</div>
+          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
+        </div>
+        <div class="ventas col-sm-6 col-md-3 padding-0" id="1003" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
+          <h2>Cemento Coboce</h2>
+          <h5>Precio 500bs</h5>
+          <div class="fakeimg">Fake Image</div>
+          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
+        </div>
+      </div>
+      <div class="row" style="padding-top:30px; padding-right: 0px ;margin-right:0px">
+        <div class="ventas col-sm-6 col-md-3 padding-0" id="1004" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
+          <h2>Cemento Coboce</h2>
+          <h5>Precio 500bs</h5>
+          <div class="fakeimg">Fake Image</div>
+          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
+        </div>
+        <div class="ventas col-sm-6 col-md-3 padding-0" id="1005" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
+          <h2>Cemento Coboce</h2>
+          <h5>Precio 500bs</h5>
+          <div class="fakeimg">Fake Image</div>
+          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
+        </div>
+        <div class="ventas col-sm-6 col-md-3 padding-0" id="1006" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
+          <h2>Cemento Coboce</h2>
+          <h5>Precio 500bs</h5>
+          <div class="fakeimg">Fake Image</div>
+          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
+        </div>
+        <div class="ventas col-sm-6 col-md-3 padding-0" id="1007" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
+          <h2>Cemento Coboce</h2>
+          <h5>Precio 500bs</h5>
+          <div class="fakeimg">Fake Image</div>
+          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla blablablablablabla</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <button type="button" class="btn btn-primary btn-lg btn-warning" style="float:right;" onclick="mostrarinfo()">Terminar Compra</button>
+  <br>
+  <div style="padding: 30px">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </div>
+  <!-- <div class="text-center" style="">
+    <p>Footer</p>
+  </div> -->
+  
+  <script>
+    var date1 =new Date();
+    var tiempoaca=0;
+      function salir()
+      {
+        var date2 = new Date();    
+        var diffTime= Math.abs(date2 - date1);
+  
+        tiempoaca=diffTime/1000;
+  
+      }
+  </script>
+  
+  <script>
+  var arrinteres=[];
+  var myTime;
+  var actobj;
+  function myTimer() {
+    if (actobj==null)
+      return;
+    var d = new Date();
+    var algo=d.toString();
+    arrinteres.push({fecha:algo,objeto:actobj.id});
+    
+    clearInterval(myTime);
+    actobj=null;
+  }
+  function mOver(obj) {
+    actobj=obj;
+    myTime= setInterval(myTimer,1200);
+  }
+  
+  function mOut(obj) {
+    clearInterval(myTime);
+  }
+  </script>
+  
+  <script>
+    var busquedas=[];
+      function registrar()
+      {
+        busquedas.push(document.getElementById("gsearch").value);
+        document.getElementById("gsearch").value="";
+      }
+  </script>
+  
+  <script>
+    function mostrarinfo()
+    {
+      var date2 = new Date();    
+      var diffTime= Math.abs(date2 - date1);
+  
+      tiempoaca=diffTime/1000;
+  
+      console.log("busquedas:  ");
+      for(var i=0;i<busquedas.length ;i++)
+      {
+        console.log(busquedas[i]+" ");
+      }
+      console.log("\n");
+      console.log("interes ");
+      for(var i=0;i<arrinteres.length ;i++)
+      {
+        console.log(arrinteres[i].fecha+" "+arrinteres[i].objeto+"   ");
+      }
+      console.log("\n");
+      console.log(tiempoaca+" segundos en esta pagina");
+    }
+  </script>
