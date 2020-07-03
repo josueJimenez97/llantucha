@@ -8,6 +8,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ObraGruesaComponent } from './pages/obra-gruesa/obra-gruesa.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ObraFinaComponent } from './pages/obra-fina/obra-fina.component';
+import { ProductosDestacadosComponent } from './componentes/productos-destacados/productos-destacados.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { ObraFinaComponent } from './pages/obra-fina/obra-fina.component';
     HeaderComponent,
     FooterComponent,
     ObraGruesaComponent,
-    ObraFinaComponent
+    ObraFinaComponent,
+    ProductosDestacadosComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,FormsModule, ImageCropperModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

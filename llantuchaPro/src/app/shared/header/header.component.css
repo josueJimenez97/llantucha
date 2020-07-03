@@ -1,5 +1,11 @@
 
 /* change the brand and text color */
+.header{
+    background-color: #c9d3d3;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
     color: #F827F6;
@@ -7,16 +13,15 @@
 }
 /* change the link color and add padding for height */
 .navbar-custom .navbar-nav .nav-link {
-    color: red;
-    padding: 1rem 1rem;
+    padding: 1rem 0rem;
 }
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link{
     background-color: purple;
 }
 .navbar-custom .nav-item:hover .nav-link {
-    color: #ffffff;
-    background-color: blue; /* add background-color to active links */
+    color: #1147A1;
+    /*background-color: #2D7DB0; /* add background-color to active links */
 }
 
 /* change the brand and text color */
@@ -29,9 +34,12 @@
 .navbar-custom .navbar-nav .nav-link {
     color: black;
 }
-
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: white;
+    color:rgb(37, 37, 240);
+}
+.boton:hover{
+    background-color: #a0c1c1;
+    opacity: 5;
 }
