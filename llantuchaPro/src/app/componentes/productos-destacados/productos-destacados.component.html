@@ -1,36 +1,12 @@
 <div class="card-group-lg card-group-md card-group-sm row px-lg-4 py-lg-4">
-    <div *ngFor="let producto of productos" class="card mx-4 my-3 col-lg-3 col-md-5 col-sm-12"> 
+    <div *ngFor="let producto of productos" class="card mx-4 p-4 my-3 col-lg-3 col-md-5 col-sm-12"> 
       <div class="card-body text-center">
         <h4 class="card-title">{{producto}}</h4>
       </div>
-      <img class="card-img-bottom pb-4" src="assets/img/ladrillo.jpg" >
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">ver producto</button>
-    </div>
-    <!--<div class="card bg-warning mx-4 my-3 col-lg-3 col-md-5 col-sm-12">
-      <div class="card-body text-center">
-        <p class="card-text">Some text inside the second card</p>
-      </div>
-    </div>
-    <div class="card bg-success mx-4 my-3 col-lg-3 col-md-5 col-sm-12">
-      <div class="card-body text-center">
-        <p class="card-text">Some text inside the third card</p>
-      </div>
-    </div>
-    <div class="card bg-danger mx-4 my-3 col-lg-3 col-md-5 col-sm-12">
-      <div class="card-body text-center">
-        <p class="card-text">Some text inside the fourth card</p>
-      </div>
-    </div>
-    <div class="card bg-primary mx-4 my-3 col-lg-3 col-md-5 col-sm-12">
-        <div class="card-body text-center">
-          <p class="card-text">Some text inside the first card</p>
-        </div>
-      </div>
-      <div class="card bg-warning mx-4 my-3 col-lg-3 col-md-5 col-sm-12">
-        <div class="card-body text-center">
-          <p class="card-text">Some text inside the second card</p>
-        </div>
-      </div>-->
+      <img class="card-img-bottom pb-4 img-fluid" src="assets/img/ladrillo.jpg" >
+      <button type="button" class="btn btn-primary" (click)="eventoClick(producto)" data-toggle="modal" data-target="#myModal">ver producto</button>
+</div>
+    
   </div>
   <div class="modal" id="myModal">
     <div class="modal-dialog">
@@ -38,13 +14,13 @@
   
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
+          <h4 class="modal-title test">Titulo</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
   
         <!-- Modal body -->
-        <div class="modal-body">
-          Modal body..
+        <div class="modal-body test">
+          descripccion del produccto
         </div>
   
         <!-- Modal footer -->
