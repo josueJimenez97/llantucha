@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { ImageUploadModule } from 'ng2-imageupload';
 
 import { AppComponent } from './app.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
@@ -16,6 +18,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ProductosObraGruesaComponent } from './componentes/productos-obra-gruesa/productos-obra-gruesa.component';
 import { ProductosPorTipoComponent } from './componentes/productos-por-tipo/productos-por-tipo.component';
+import { AgregarProductosComponent } from './componentes/agregar-productos/agregar-productos.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +34,15 @@ import { ProductosPorTipoComponent } from './componentes/productos-por-tipo/prod
     LoginComponent,
     CarritoComponent,
     ProductosObraGruesaComponent,
-    ProductosPorTipoComponent
+    ProductosPorTipoComponent,
+    AgregarProductosComponent
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule
+    AppRoutingModule,FormsModule,
+    HttpClientModule,
+    ImageUploadModule
   ],
   providers: [],
   bootstrap: [AppComponent]
