@@ -3,6 +3,10 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { NgModule } from '@angular/core';
 import { ObraGruesaComponent } from './pages/obra-gruesa/obra-gruesa.component';
 import { ObraFinaComponent } from './pages/obra-fina/obra-fina.component';
+import { HerramientasComponent } from './pages/herramientas/herramientas.component';
+import { MaquinariaComponent } from './pages/maquinaria/maquinaria.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {
@@ -22,6 +26,27 @@ const routes: Routes = [
   {
       path: 'obraGruesa',
       component: ObraGruesaComponent
+  },
+  
+  {
+    path: 'obraFina',
+    component: ObraFinaComponent
+  },
+  {
+    path: 'herramientas',
+    component: HerramientasComponent
+  },
+  {
+    path: 'maquinaria',
+    component: MaquinariaComponent
+  },
+  {
+    path: 'carrito',
+    component: CarritoComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   { path: '', pathMatch: 'full', redirectTo: 'inicio' },
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }

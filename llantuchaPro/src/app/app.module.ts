@@ -10,6 +10,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { ObraFinaComponent } from './pages/obra-fina/obra-fina.component';
 import { ProductosDestacadosComponent } from './componentes/productos-destacados/productos-destacados.component';
 import { FormsModule } from '@angular/forms';
+import { HerramientasComponent } from './pages/herramientas/herramientas.component';
+import { MaquinariaComponent } from './pages/maquinaria/maquinaria.component';
+import { LoginComponent } from './pages/login/login.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
+import { ProductosObraGruesaComponent } from './componentes/productos-obra-gruesa/productos-obra-gruesa.component';
+import { ProductosPorTipoComponent } from './componentes/productos-por-tipo/productos-por-tipo.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +25,13 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     ObraGruesaComponent,
     ObraFinaComponent,
-    ProductosDestacadosComponent
+    ProductosDestacadosComponent,
+    HerramientasComponent,
+    MaquinariaComponent,
+    LoginComponent,
+    CarritoComponent,
+    ProductosObraGruesaComponent,
+    ProductosPorTipoComponent
     
   ],
   imports: [
