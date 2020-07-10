@@ -24,10 +24,16 @@ export class AgregarProductosComponent implements OnInit {
   }
 
   subiendo(ev){
+    var laimg=(<HTMLInputElement>document.getElementById("img"));
+    console.log(laimg.width);
+    console.log(laimg.height);
+    //laimg.height = 150;
+    //laimg.width = 150;
     let img:any = ev.target;
     if(img.files.length > 0){
       this.loader = true;
       let form = new FormData();
+      console.log(img.files[0]);
       form.append('file',img.files[0]);
       this.phpService.subirImagen(form).subscribe(
         resp => {

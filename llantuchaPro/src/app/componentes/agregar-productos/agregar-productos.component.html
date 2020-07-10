@@ -18,7 +18,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <input type="file" class="form-control-file border" name="file" (change)="subiendo($event)"
+                <input id="img" type="file" class="form-control-file border" name="file" (change)="subiendo($event)" width="100"
                 accept="image/*"/>
             </div>
             
@@ -34,7 +34,7 @@
                     <div class="card-body text-center">
                         <h4 class="card-title">nombre de producto</h4>
                     </div>
-                    <img class="card-img-bottom p-4 img-fluid" src="{{imagen}}" width="100px" height="100px">
+                    <img class="card-img-bottom p-4 img-fluid" src="{{imagen}}" >
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">ver
                         producto</button>
                 </div>

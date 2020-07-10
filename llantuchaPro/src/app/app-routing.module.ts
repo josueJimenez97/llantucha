@@ -6,7 +6,7 @@ import { ObraFinaComponent } from './pages/obra-fina/obra-fina.component';
 import { HerramientasComponent } from './pages/herramientas/herramientas.component';
 import { MaquinariaComponent } from './pages/maquinaria/maquinaria.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
-import { LoginComponent } from './pages/login/login.component';
+import { LoginComponent } from './componentes/login/login.component';
 import { AgregarProductosComponent } from './componentes/agregar-productos/agregar-productos.component';
 
 const routes: Routes = [

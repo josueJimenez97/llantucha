@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {ImageCropperComponent, CropperSettings} from 'ng2-img-cropper';
 
 @Component({
   selector: 'app-herramientas',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./herramientas.component.css']
 })
 export class HerramientasComponent implements OnInit {
-
-  constructor() { }
+    
+    
+    constructor() {
+      
+  }
 
   ngOnInit(): void {
   }
+
+  
 
 }
