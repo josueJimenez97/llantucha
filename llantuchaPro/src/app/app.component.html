@@ -1,7 +1,7 @@
 <body>
-  <app-header ></app-header>
+  <app-header *ngIf="!rutaLogin()"></app-header>
   <div class="miBody">
     <router-outlet></router-outlet>
   </div>
-  <app-footer ></app-footer>
+  <app-footer *ngIf="!rutaLogin()"></app-footer>
 </body>

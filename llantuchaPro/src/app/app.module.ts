@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 // los componentesss
+import {CommonModule} from '@angular/common';
 import { AppComponent } from './app.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -19,7 +20,8 @@ import { LoginComponent } from './componentes/login/login.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { ProductosObraGruesaComponent } from './componentes/productos-obra-gruesa/productos-obra-gruesa.component';
 import { ProductosPorTipoComponent } from './componentes/productos-por-tipo/productos-por-tipo.component';
-import { AgregarProductosComponent } from './componentes/agregar-productos/agregar-productos.component';
+import { AgregarProductosComponent } from './pages/agregar-productos/agregar-productos.component';
+import { InventarioComponent } from './pages/inventario/inventario.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +38,11 @@ import { AgregarProductosComponent } from './componentes/agregar-productos/agreg
     CarritoComponent,
     ProductosObraGruesaComponent,
     ProductosPorTipoComponent,
-    AgregarProductosComponent
-    
+    AgregarProductosComponent,
+    InventarioComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,CommonModule,
     AppRoutingModule,FormsModule,
     HttpClientModule
   ],

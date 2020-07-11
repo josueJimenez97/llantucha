@@ -7,7 +7,8 @@ import { HerramientasComponent } from './pages/herramientas/herramientas.compone
 import { MaquinariaComponent } from './pages/maquinaria/maquinaria.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { LoginComponent } from './componentes/login/login.component';
-import { AgregarProductosComponent } from './componentes/agregar-productos/agregar-productos.component';
+import { AgregarProductosComponent } from './pages/agregar-productos/agregar-productos.component';
+import { InventarioComponent } from './pages/inventario/inventario.component';
 
 const routes: Routes = [
   {
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path: 'agregarProductos',
     component: AgregarProductosComponent
+  },
+  {
+    path: 'inventario',
+    component: InventarioComponent
   },
   { path: '', pathMatch: 'full', redirectTo: 'inicio' },
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }

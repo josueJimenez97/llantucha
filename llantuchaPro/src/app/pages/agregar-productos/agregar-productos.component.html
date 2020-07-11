@@ -1,14 +1,15 @@
-<h2 class="px-4">Agregar nuevo producto</h2>
-<hr>
-<div class="row px-4">
-    
-    <div class="col-4">
+<div class="row">
+    <div class="col-lg-2 col-md-1">
+    </div>
+    <div class="col-lg-4 col-md-5 ">
+        <h2 class="px-4">Agregar nuevo producto</h2>
+        <hr>
         <form action="#">
-            <div class="form-group">
+            <div class="form-group px-4">
                 <label for="usr">nombre del producto</label>
                 <input type="text" class="form-control" id="usr">
             </div>
-            <div class="form-group">
+            <div class="form-group px-4">
                 <label for="sel1">categoria</label>
                 <select class="form-control" id="sel1">
                     <option>obra gruesa</option>
@@ -17,24 +18,24 @@
                     <option>maquinaria</option>
                 </select>
             </div>
-            <div class="form-group">
-                <input id="img" type="file" class="form-control-file border" name="file" (change)="subiendo($event)" width="100"
-                accept="image/*"/>
+            <div class="form-group px-4">
+                <input type="file" id="img" (change)="subiendo($event)"
+                 accept="image/*"/>
             </div>
-            
-            <button type="submit" class="btn btn-primary">guardar</button>
-            
+
+            <button type="submit" class="btn btn-primary mx-4">guardar</button>
+            <button type="submit" class="btn btn-primary" (click)="enVistaPrevia()">{{vistaPrevia}}</button>
         </form>
     </div>
-    <div class="col-4">
-        <div *ngIf='imagen!=""'>
-            <h2 >vista previa img </h2>
+    <div class="col-lg-4 col-md-5 mx-4 my-4 my-lg-0 my-md-0">
+        <div *ngIf="verImagen">
+            <h2>vista previa img </h2>
             <div class="card-group">
                 <div class="card ">
                     <div class="card-body text-center">
                         <h4 class="card-title">nombre de producto</h4>
                     </div>
-                    <img class="card-img-bottom p-4 img-fluid" src="{{imagen}}" >
+                    <img class="card-img-bottom p-4 img-fluid" src="{{imagen}}">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">ver
                         producto</button>
                 </div>
@@ -65,8 +66,6 @@
             </div>
         </div>
 
+
     </div>
 </div>
-<!--
-<img [src]="src" [hidden]="!src">
-<input type="file" imageUpload (imageSelected)="selected($event)" [resizeOptions]="resizeOptions">-->

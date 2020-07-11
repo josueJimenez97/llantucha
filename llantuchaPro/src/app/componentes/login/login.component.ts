@@ -25,6 +25,6 @@ export class LoginComponent implements OnInit {
     localStorage.setItem("user",encodedData);
     console.log(this.router.url);
     //this.router.navigate(["/inicio?refresh=1"]);
-    this.router.navigate([`/inicio`]);
+    this.router.navigate(["/inicio"]);
   }
 }

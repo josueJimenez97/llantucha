@@ -17,7 +17,7 @@
 }
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link{
-    background-color: purple;
+    color: purple;
 }
 .navbar-custom .nav-item:hover .nav-link {
     color: #1147A1;
@@ -35,11 +35,17 @@
     color: black;
 }
 /* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item.active .nav-link{
+    color:rgb(37, 37, 240);
+}
 .navbar-custom .nav-item:hover .nav-link {
     color:rgb(37, 37, 240);
 }
 .boton:hover{
     background-color: #a0c1c1;
     opacity: 5;
+}
+
+.dropdown-menu a:hover{
+    background-color: #C9D3D3;
 }
