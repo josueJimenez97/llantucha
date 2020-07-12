@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PhpServiceService } from 'src/app/services/php-service.service';
 import { ImageResult, ResizeOptions } from 'ng2-imageupload';
+import { Producto } from 'src/app/clases/producto';
 declare var $: any;
 @Component({
   selector: 'app-agregar-productos',
@@ -45,9 +46,6 @@ export class AgregarProductosComponent implements OnInit {
           if (resp.status) {
             this.trueimg = true;
             this.imagen = "data:image/png;base64," + resp.msg;
-            //console.log(resp.msg);
-            //this.myimg = environment.ruta+resp.generatedName;
-            //this.msn = "Gracias por visitar unprogramador.com"
           } else {
             console.log(resp.msg);
           }
@@ -62,12 +60,13 @@ export class AgregarProductosComponent implements OnInit {
   }
   guardarProducto() {
     console.log("aqui vamo a guardar el producto");
-  }
-
-  selected(imageResult: ImageResult) {
-    this.src = imageResult.resized
-      && imageResult.resized.dataURL
-      || imageResult.dataURL;
+    let nombrePro=(<HTMLInputElement>document.getElementById("producto")).value;
+    console.log(nombrePro);
+    let categoria= (<HTMLInputElement>document.getElementById("categoria")).value;
+    console.log(categoria);
+    console.log(this.imagen);
+    let prod: Producto= new Producto(nombrePro,categoria,this.imagen,0);
+    this.agregarProductoBD(prod);
   }
 
   enVistaPrevia(){
@@ -80,5 +79,17 @@ export class AgregarProductosComponent implements OnInit {
         this.vistaPrevia="ocultar";
       }
     }
+  }
+
+  agregarProductoBD(prod:Producto){
+    this.phpService.agregarProducto(prod).subscribe(
+      resp=>{
+        if(resp=='correcto'){
+          alert("todo posi");
+        }else{
+          alert("algo salio mal");
+        }
+      }
+    );
   }
 }

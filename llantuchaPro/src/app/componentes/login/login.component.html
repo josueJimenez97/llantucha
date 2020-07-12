@@ -14,6 +14,7 @@
             </div>
             <div class="form-group mx-4">
                 <input type="submit" class="btn btn-primary" (click)="iniciarSesion()" value="ingresar" />
+                <p *ngIf="usuarioIncorrecto" class="text-danger">datos incorrectos</p>
             </div>
             <div class="form-group mx-4">
                 <a href="#" class="text-primary">olvidaste tu contraseñia?</a>

@@ -6,12 +6,12 @@
         <hr>
         <form action="#">
             <div class="form-group px-4">
-                <label for="usr">nombre del producto</label>
-                <input type="text" class="form-control" id="usr">
+                <label for="producto">nombre del producto</label>
+                <input type="text" class="form-control" id="producto">
             </div>
             <div class="form-group px-4">
-                <label for="sel1">categoria</label>
-                <select class="form-control" id="sel1">
+                <label for="categoria">categoria</label>
+                <select class="form-control" id="categoria">
                     <option>obra gruesa</option>
                     <option>obra fina</option>
                     <option>herramientas</option>
@@ -23,7 +23,7 @@
                  accept="image/*"/>
             </div>
 
-            <button type="submit" class="btn btn-primary mx-4">guardar</button>
+            <button type="submit" class="btn btn-primary mx-4" (click)="guardarProducto()">guardar</button>
             <button type="submit" class="btn btn-primary" (click)="enVistaPrevia()">{{vistaPrevia}}</button>
         </form>
     </div>

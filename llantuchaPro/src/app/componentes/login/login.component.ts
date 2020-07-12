@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  usuarioIncorrecto=false;
   constructor(private service:PhpServiceService,private router:Router) { }
 
   ngOnInit(): void {
@@ -19,12 +19,23 @@ export class LoginComponent implements OnInit {
   iniciarSesion(){
     let user=(<HTMLInputElement>document.getElementById("usuario")).value;
     let pass=(<HTMLInputElement>document.getElementById("contrasenia")).value;
-    alert("verificar si el usuario existe "+user+" "+pass);
     let usuario=new Usuario(user,pass);
-    const encodedData = window.btoa(JSON.stringify(usuario)); // encode a string
-    localStorage.setItem("user",encodedData);
-    console.log(this.router.url);
-    //this.router.navigate(["/inicio?refresh=1"]);
-    this.router.navigate(["/inicio"]);
+    this.verificarUsuarioBD(usuario);
+    
+  }
+
+  verificarUsuarioBD(usuario){
+    this.service.iniciarSesion(usuario).subscribe(
+      resp=>{
+        console.log(resp)
+        if(resp=='correcto'){
+          const encodedData = window.btoa(JSON.stringify(usuario)); // encode a string
+          localStorage.setItem("user",encodedData);
+          this.router.navigate(["/inicio"]);
+        }else{
+          this.usuarioIncorrecto=true;
+        }
+      }
+    );
   }
 }

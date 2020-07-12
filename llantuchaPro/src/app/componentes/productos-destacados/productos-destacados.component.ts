@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Producto } from 'src/app/clases/producto';
+import { PhpServiceService } from 'src/app/services/php-service.service';
 declare var $: any;
 @Component({
   selector: 'app-productos-destacados',
@@ -6,13 +8,9 @@ declare var $: any;
   styleUrls: ['./productos-destacados.component.css']
 })
 export class ProductosDestacadosComponent implements OnInit {
-  productos:string[] =[];
-  constructor() { 
-    this.productos.push("ladrillo");
-    this.productos.push("cemento");
-    this.productos.push("fierro");
-    this.productos.push("yeso");
-    this.productos.push("madera");
+  productos:Producto[] =[];
+  constructor(private phpService:PhpServiceService) { 
+    this.cargarProductos();
   }
 
   ngOnInit(): void {
@@ -32,5 +30,15 @@ export class ProductosDestacadosComponent implements OnInit {
   }
   eventoClick(producto:string){
     alert("se hizo click en el producto "+producto);
+  }
+
+  cargarProductos(){
+    this.phpService.getProductos().subscribe(
+      resp=>{
+        for(let i in resp){
+          this.productos.push(new Producto(resp[i].nombre,resp[i].categoria,resp[i].imagen,resp[i].cantidad));
+        }
+      }
+    );
   }
 }
