@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PhpServiceService } from 'src/app/services/php-service.service';
-import { ImageResult, ResizeOptions } from 'ng2-imageupload';
 import { Producto } from 'src/app/clases/producto';
 declare var $: any;
 @Component({
@@ -17,11 +16,7 @@ export class AgregarProductosComponent implements OnInit {
   //imagen="assets/img/construccion2.jpg";
   imagen: string = "";
   src: string = "";
-  resizeOptions: ResizeOptions = {
-    resizeMaxHeight: 128,
-    resizeMaxWidth: 128
-  };
-
+  
   constructor(private phpService: PhpServiceService) { }
 
   ngOnInit(): void {
