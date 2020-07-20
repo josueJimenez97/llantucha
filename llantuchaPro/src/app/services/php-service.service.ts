@@ -27,7 +27,8 @@ export class PhpServiceService {
     return this.http.post(`${this.URL}agregarProducto.php`,JSON.stringify(prod));
   }
 
-  public getTipoProductos(prod:Producto){
-    return this.http.post(`${this.URL}obtenerProductosTipo.php`,JSON.stringify(prod));
+  public getTipoProductos(idTipo: number){
+    return this.http.get(`${this.URL}obtenerProductosTipo.php?idTipo=${idTipo}`);
   }
+  
 }

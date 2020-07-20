@@ -31,7 +31,7 @@ export class AgregarProductosComponent implements OnInit {
     //laimg.width = 150;
     let img: any = ev.target;
     if (img.files.length > 0) {
-      this.loader = true;
+      this.loader = true; 
       let form = new FormData();
       console.log(img.files[0]);
       form.append('file', img.files[0]);

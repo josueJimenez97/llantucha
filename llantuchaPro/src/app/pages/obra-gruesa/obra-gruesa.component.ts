@@ -21,7 +21,7 @@ export class ObraGruesaComponent implements OnInit {
   }
 
   cargartipo(){
-    this.phpService.getTipoProductos(this.tipo).subscribe(
+    this.phpService.getTipoProductos(2).subscribe(
       resp=>{
         alert(this.productos.length);
         alert(resp);
