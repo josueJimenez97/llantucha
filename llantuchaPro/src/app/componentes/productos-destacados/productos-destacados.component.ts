@@ -9,7 +9,7 @@ declare var $: any;
 })
 export class ProductosDestacadosComponent implements OnInit {
   productos:Producto[] =[];
-  constructor(private phpService:PhpServiceService) { 
+  constructor(private phpService:PhpServiceService) {
     this.cargarProductos();
   }
 

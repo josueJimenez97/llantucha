@@ -1,6 +1,6 @@
 <p>obra-gruesa works!</p>
 <div class="row" style="margin-right:0px;">
-  
+
     <div class="col-2" style="padding-top: 60px">
         <div class="dropdown">
           <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
@@ -12,62 +12,48 @@
             <a class="dropdown-item" href="#">Viacha</a>
           </div>
         </div>
+      <br><br>
+
     </div>
-  
-    <div class="col-10">
-      <div class="row" style="padding-top:60px; padding-right: 0px ;margin-right:0px">
-        <div class="ventas col-sm-6 col-md-3 padding-0" id="1000" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
-          <h2>Cemento Coboce</h2>
-          <h5>Precio 500bs</h5>
-          <div class="fakeimg">Fake Image</div>
-          <p  class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
-        </div>
-        <div class="ventas col-sm-6 col-md-3 padding-0" id="1001" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
-          <h2>Cemento Coboce</h2>
-          <h5>Precio 500bs</h5>
-          <div class="fakeimg">Fake Image</div>
-          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
-        </div>
-        <div class="ventas col-sm-6 col-md-3 padding-0" id="1002" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
-          <h2>Cemento Coboce</h2>
-          <h5>Precio 500bs</h5>
-          <div class="fakeimg">Fake Image</div>
-          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
-        </div>
-        <div class="ventas col-sm-6 col-md-3 padding-0" id="1003" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
-          <h2>Cemento Coboce</h2>
-          <h5>Precio 500bs</h5>
-          <div class="fakeimg">Fake Image</div>
-          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
+
+      <div class="col-10">
+            <div class="col-lg-12 col-10">
+              <div class="card-group-lg card-group-md card-group-sm row px-lg-4 ">
+                <div *ngFor="let prod of productos" class="card mx-3 p-3 my-3 col-lg-4 col-md-4 col-8">
+                  <div class="card-body text-center">
+                    <h4 class="card-title">{{prod.getNombre()}}</h4>
+                  </div>
+                  <img class="card-img-bottom pb-3 img-fluid" src="{{prod.getImagen()}}" >
+                  <button type="button" class="btn btn-primary" (click)="eventoClick(prod.getNombre())" data-toggle="modal" data-target="#myModal">ver producto</button>
+            </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title test">Titulo</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body test">
+              descripccion del produccto
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
         </div>
       </div>
-      <div class="row" style="padding-top:30px; padding-right: 0px ;margin-right:0px">
-        <div class="ventas col-sm-6 col-md-3 padding-0" id="1004" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
-          <h2>Cemento Coboce</h2>
-          <h5>Precio 500bs</h5>
-          <div class="fakeimg">Fake Image</div>
-          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
-        </div>
-        <div class="ventas col-sm-6 col-md-3 padding-0" id="1005" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
-          <h2>Cemento Coboce</h2>
-          <h5>Precio 500bs</h5>
-          <div class="fakeimg">Fake Image</div>
-          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
-        </div>
-        <div class="ventas col-sm-6 col-md-3 padding-0" id="1006" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
-          <h2>Cemento Coboce</h2>
-          <h5>Precio 500bs</h5>
-          <div class="fakeimg">Fake Image</div>
-          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla</p>
-        </div>
-        <div class="ventas col-sm-6 col-md-3 padding-0" id="1007" onmouseover="mOver(this)" onmouseout="mOut(this)"  style="max-height: 400px" >
-          <h2>Cemento Coboce</h2>
-          <h5>Precio 500bs</h5>
-          <div class="fakeimg">Fake Image</div>
-          <p class="h-5">Descripcion del producto sin sentido bla bla bla bla bla blabla bla blabla bla blabla bla blabla bla bla blablablablablabla</p>
-        </div>
-      </div>
-    </div>
+
   </div>
   <br>
   <button type="button" class="btn btn-primary btn-lg btn-warning" style="float:right;" onclick="mostrarinfo()">Terminar Compra</button>
@@ -84,20 +70,19 @@
   <!-- <div class="text-center" style="">
     <p>Footer</p>
   </div> -->
-  <app-productos-destacados></app-productos-destacados>
   <script>
     var date1 =new Date();
     var tiempoaca=0;
       function salir()
       {
-        var date2 = new Date();    
+        var date2 = new Date();
         var diffTime= Math.abs(date2 - date1);
-  
+
         tiempoaca=diffTime/1000;
-  
+
       }
   </script>
-  
+
   <script>
   var arrinteres=[];
   var myTime;
@@ -108,7 +93,7 @@
     var d = new Date();
     var algo=d.toString();
     arrinteres.push({fecha:algo,objeto:actobj.id});
-    
+
     clearInterval(myTime);
     actobj=null;
   }
@@ -116,12 +101,12 @@
     actobj=obj;
     myTime= setInterval(myTimer,1200);
   }
-  
+
   function mOut(obj) {
     clearInterval(myTime);
   }
   </script>
-  
+
   <script>
     var busquedas=[];
       function registrar()
@@ -130,15 +115,15 @@
         document.getElementById("gsearch").value="";
       }
   </script>
-  
+
   <script>
     function mostrarinfo()
     {
-      var date2 = new Date();    
+      var date2 = new Date();
       var diffTime= Math.abs(date2 - date1);
-  
+
       tiempoaca=diffTime/1000;
-  
+
       console.log("busquedas:  ");
       for(var i=0;i<busquedas.length ;i++)
       {
