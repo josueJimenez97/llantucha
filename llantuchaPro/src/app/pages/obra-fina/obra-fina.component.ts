@@ -1,47 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { PhpServiceService } from 'src/app/services/php-service.service';
+import { Producto } from 'src/app/clases/producto';
 @Component({
   selector: 'app-obra-fina',
   templateUrl: './obra-fina.component.html',
   styleUrls: ['./obra-fina.component.css']
 })
 export class ObraFinaComponent implements OnInit {
-  loader:boolean;
-  trueimg:boolean;
-  imagen="assets/img/construccion2.jpg";
-  imagen2:string;
-  constructor(private subir:PhpServiceService ) { }
+  productos: Producto[]=[];
+  constructor(private subir:PhpServiceService ) { 
+    this.cargarDatosPrueba();
+  }
 
   ngOnInit(): void {
   }
   
-  subiendo(ev){
-    this.imagen2="data:image/png;base64,";
-    let img:any = ev.target;
-    if(img.files.length > 0){
-      this.loader = true;
-      let form = new FormData();
-      form.append('file',img.files[0]);
-      this.subir.subirImagen(form).subscribe(
-        resp => {
-          this.loader = false;
-          if(resp.status){
-            this.trueimg = true;
-            this.imagen2+=resp.msg;
-            this.imagen=this.imagen2;
-            console.log(resp.msg);
-            //this.myimg = environment.ruta+resp.generatedName;
-            //this.msn = "Gracias por visitar unprogramador.com"
-          }else{
-            console.log(resp.msg);
-          }
-        },
-        error => {
-          this.loader = false;
-          alert('Imagen supera el tamaño permitido');
-          
-        }
-      );
-    }
+  cargarDatosPrueba(){
+    this.productos.push(new Producto("ceramica","obra fina",""));
+    
+    this.productos.push(new Producto("tubo 1/4","obra fina",""));
+    this.productos.push(new Producto("yeso","obra fina",""));
+    this.productos.push(new Producto("cemento cola","obra fina",""));
+    
+    this.productos.push(new Producto("pintura","obra fina",""));
+    
+    this.productos.push(new Producto("lava manos","obra fina",""));
+  }
+  eventoClick(producto:string){
+    alert("se hizo click en el producto "+producto);
   }
 }

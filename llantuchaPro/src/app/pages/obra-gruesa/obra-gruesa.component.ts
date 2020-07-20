@@ -10,7 +10,8 @@ export class ObraGruesaComponent implements OnInit {
   tipo= new Producto('','Obra Gruesa','',0);
   productos:Producto[] =[];
   constructor(private phpService:PhpServiceService) {
-    this.cargartipo();
+    //this.cargartipo();
+    this.cargarDatosPrueba();
   }
 
   ngOnInit(): void {
@@ -31,5 +32,17 @@ export class ObraGruesaComponent implements OnInit {
         }
       }
     );
+  }
+
+  cargarDatosPrueba(){
+    this.productos.push(new Producto("cemento","obra fina",""));
+    
+    this.productos.push(new Producto("ladrillo","obra fina",""));
+    this.productos.push(new Producto("arena","obra fina",""));
+    this.productos.push(new Producto("fierro","obra fina",""));
+    
+    this.productos.push(new Producto("piedra","obra fina",""));
+    
+    this.productos.push(new Producto("cascajo","obra fina",""));
   }
 }

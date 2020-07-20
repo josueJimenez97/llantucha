@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Producto } from 'src/app/clases/producto';
 
 @Component({
   selector: 'app-maquinaria',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./maquinaria.component.css']
 })
 export class MaquinariaComponent implements OnInit {
-
-  constructor() { }
+  productos: Producto[]=[];
+  constructor() { 
+    this.cargarDatosPrueba();
+  }
 
   ngOnInit(): void {
     if(typeof(Storage) !== "undefined") {
@@ -18,5 +21,13 @@ export class MaquinariaComponent implements OnInit {
       console.log("neeeeel")
      }
   }
-
+  cargarDatosPrueba(){
+    this.productos.push(new Producto("mezcladora","obra fina",""));
+    
+    this.productos.push(new Producto("vibradora","obra fina",""));
+    this.productos.push(new Producto("ginche","obra fina",""));
+  }
+  eventoClick(producto:string){
+    alert("se hizo click en el producto "+producto);
+  }
 }
