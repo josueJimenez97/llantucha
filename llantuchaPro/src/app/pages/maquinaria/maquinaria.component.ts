@@ -13,13 +13,11 @@ export class MaquinariaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(typeof(Storage) !== "undefined") {
-      // Code for localStorage/sessionStorage.
-      console.log("tengo web storage");
-     } else {
-      // Sorry! No Web Storage support..
-      console.log("neeeeel")
-     }
+    if(sessionStorage.getItem("produtosVistos")!=null){
+      console.log(sessionStorage.getItem("produtosVistos"));
+    }else{
+      console.log("no hay sesion storage");
+    }
   }
   cargarDatosPrueba(){
     this.productos.push(new Producto("mezcladora","obra fina",""));

@@ -1,27 +1,39 @@
 <div class="container">
-    <div class="table-responsive">
-        <h2>Inventario de Productos</h2>
-        <p>filtrar productos xd</p>
-        <table class="table align-middle table-hover table-secondary mt-2 table-bordered">
-          <thead class="thead-dark">
-            <tr >
-              <th >nombre</th>
-              <th >categoria</th>
-              <th >cantidad</th>
-              <th >acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let prod of productos">
-              <td>{{prod.getNombre()}}</td>
-              <td>{{prod.getCategoria()}}</td>
-              <td>{{prod.getCantidad()}}</td>
-              <td><button class="btn btn-success"> xd</button></td>
-            </tr>
-            
-          </tbody>
-        </table>
-       
-      </div>
-      
+  <div class="table-responsive">
+    <h2>Inventario de Productos</h2>
+    <p>filtrar productos xd</p>
+    <table class="table align-middle table-hover table-secondary mt-2 table-bordered">
+      <thead class="thead-dark">
+        <tr class="text-center">
+          <th>nombre</th>
+          <th>categoria</th>
+          <th>cantidad</th>
+          <th>acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prod of productos">
+          <td [class.bg-warning]="prod.getCantidad()<20">{{prod.getNombre()}}</td>
+          <td [class.bg-warning]="prod.getCantidad()<20">{{prod.getCategoria()}}</td>
+          <td [class.bg-warning]="prod.getCantidad()<20">{{prod.getCantidad()}}</td>
+          <td [class.bg-warning]="prod.getCantidad()<20" class="text-center">
+            <div class="btn btn-group" role="group">
+              <button [class.btn-info]="prod.getCantidad()<20" class="btn btn-outline-info" data-toggle="tooltip" data-placement="bottom" title="stock" type="button">
+                <i [class.text-white]="prod.getCantidad()<20" class="fa fa-plus"></i>
+              </button>
+              <button [class.btn-success]="prod.getCantidad()<20" class="btn btn-outline-success mx-1" data-toggle="tooltip" data-placement="bottom" title="editar" type="button">
+                <i [class.text-white]="prod.getCantidad()<20" class="fa fa-pencil"></i>
+              </button>
+              <button [class.btn-danger]="prod.getCantidad()<20" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="bottom" title="borrar" type="button">
+                <i [class.text-white]="prod.getCantidad()<20" class="fa fa-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
 </div>
