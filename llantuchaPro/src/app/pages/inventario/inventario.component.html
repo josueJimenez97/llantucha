@@ -2,6 +2,7 @@
   <div class="table-responsive">
     <h2>Inventario de Productos</h2>
     <p>filtrar productos xd</p>
+    <button>agregar producto</button>
     <table class="table align-middle table-hover table-secondary mt-2 table-bordered">
       <thead class="thead-dark">
         <tr class="text-center">
@@ -12,10 +13,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let prod of productos">
+        <!--<tr *ngFor="let prod of productos">
           <td [class.bg-warning]="prod.getCantidad()<20">{{prod.getNombre()}}</td>
           <td [class.bg-warning]="prod.getCantidad()<20">{{prod.getCategoria()}}</td>
-          <td [class.bg-warning]="prod.getCantidad()<20">{{prod.getCantidad()}}</td>
+          <td [class.bg-warning]="prod.getCantidad()<20">0</td>
           <td [class.bg-warning]="prod.getCantidad()<20" class="text-center">
             <div class="btn btn-group" role="group">
               <button [class.btn-info]="prod.getCantidad()<20" class="btn btn-outline-info" data-toggle="tooltip" data-placement="bottom" title="stock" type="button">
@@ -31,7 +32,7 @@
           </td>
         </tr>
 
-      </tbody>
+      </tbody>-->
     </table>
 
   </div>

@@ -20,18 +20,18 @@ export class ObraFinaComponent implements OnInit {
   }
   
   cargarDatosPrueba(){
-    this.productos.push(new Producto("ceramica","obra fina","",3));
+    this.productos.push(new Producto("ceramica","obra fina",""));
     
-    this.productos.push(new Producto("tubo 1/4","obra fina","",5));
+    this.productos.push(new Producto("tubo 1/4","obra fina",""));
     this.productos.push(new Producto("yeso","obra fina",""));
-    this.productos.push(new Producto("cemento cola","obra fina","",15));
+    this.productos.push(new Producto("cemento cola","obra fina",""));
     
-    this.productos.push(new Producto("pintura","obra fina","",80));
+    this.productos.push(new Producto("pintura","obra fina",""));
     
-    this.productos.push(new Producto("lava manos","obra fina","",145));
+    this.productos.push(new Producto("lava manos","obra fina",""));
   }
   eventoClick(producto:Producto){
-    if(sessionStorage.getItem("productosVistos")!=null){
+    /*if(sessionStorage.getItem("productosVistos")!=null){
       console.log(sessionStorage.getItem("productosVistos"));
       this.productosVistos=JSON.parse(sessionStorage.getItem("productosVistos"));
     }else{
@@ -42,7 +42,7 @@ export class ObraFinaComponent implements OnInit {
     if(!this.existeIdProductoVisto(producto.getCantidad())){
       this.productosVistos.push(producto.getCantidad());
       sessionStorage.setItem("productosVistos",JSON.stringify(this.productosVistos));
-    }
+    }*/
     sessionStorage.setItem("producto",JSON.stringify(producto));
   }
 

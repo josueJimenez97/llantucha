@@ -22,21 +22,21 @@ export class InventarioComponent implements OnInit {
   }
 
   cargarDatosPrueba(){
-    this.productos.push(new Producto("ceramica","obra fina","",50));
+    this.productos.push(new Producto("ceramica","obra fina",""));
     
     this.productos.push(new Producto("tubo 1/4","obra fina",""));
     this.productos.push(new Producto("yeso","obra fina",""));
     this.productos.push(new Producto("cemento cola","obra fina",""));
     
-    this.productos.push(new Producto("pintura","obra fina","",25));
+    this.productos.push(new Producto("pintura","obra fina",""));
     
-    this.productos.push(new Producto("lava manos","obra fina","",15));
+    this.productos.push(new Producto("lava manos","obra fina",""));
   }
   cargarProductos(){
     this.phpService.getProductos().subscribe(
       resp=>{
         for(let i in resp){
-          this.productos.push(new Producto(resp[i].nombre,resp[i].categoria,resp[i].imagen,resp[i].cantidad));
+          this.productos.push(new Producto(resp[i].nombre,resp[i].categoria,resp[i].imagen));
         }
       }
     );

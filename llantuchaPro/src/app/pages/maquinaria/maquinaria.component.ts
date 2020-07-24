@@ -28,7 +28,7 @@ export class MaquinariaComponent implements OnInit {
     this.productos.push(new Producto("ginche","obra fina",""));
   }
   eventoClick(producto:Producto){
-    if(sessionStorage.getItem("productosVistos")!=null){
+    /*if(sessionStorage.getItem("productosVistos")!=null){
       console.log(sessionStorage.getItem("productosVistos"));
       this.productosVistos=JSON.parse(sessionStorage.getItem("productosVistos"));
     }else{
@@ -39,7 +39,7 @@ export class MaquinariaComponent implements OnInit {
     if(!this.existeIdProductoVisto(producto.getCantidad())){
       this.productosVistos.push(producto.getCantidad());
       sessionStorage.setItem("productosVistos",JSON.stringify(this.productosVistos));
-    }
+    }*/
     sessionStorage.setItem("producto",JSON.stringify(producto));
   }
 
