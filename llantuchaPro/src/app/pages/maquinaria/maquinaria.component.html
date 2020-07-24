@@ -1,5 +1,5 @@
 
-<div class="row">
+<div *ngIf="esActivo('/maquinaria')" class="row">
     <div class="col-12 col-lg-6">
         <h1 class="mx-4 text-dark">Maquinaria de construccion</h1>
     </div>
@@ -25,8 +25,8 @@
         </form>
     </div>
 </div>
-<hr class="border border-secondary mx-4" >
-<div class="row">
+<hr *ngIf="esActivo('/maquinaria')" class="border border-secondary mx-4" >
+<div *ngIf="esActivo('/maquinaria')" class="row">
     <div class="col-2">
   
     </div>
@@ -37,40 +37,10 @@
             <h4 class="card-title">{{prod.getNombre()}}</h4>
           </div>
           <img class="card-img-bottom pb-3 img-fluid" src="{{prod.getImagen()}}" >
-          <button type="button" class="btn btn-primary" (click)="eventoClick(prod.getNombre())" data-toggle="modal" data-target="#myModal">ver producto</button>
+          <button type="button" class="btn btn-primary" routerLink="itemes" (click)="eventoClick(prod)">ver mas</button>
     </div>
     </div>
   </div>
-  <!--<div class="card-group-lg card-group-md card-group-sm row px-lg-4 py-lg-4">
-      <div *ngFor="let producto of productos" class="card mx-4 p-4 my-3 col-lg-3 col-md-5 col-sm-12"> 
-        <div class="card-body text-center">
-          <h4 class="card-title">{{producto}}</h4>
-        </div>
-        <img class="card-img-bottom pb-4 img-fluid" src="assets/img/ladrillo.jpg" >
-        <button type="button" class="btn btn-primary" (click)="eventoClick(producto)" data-toggle="modal" data-target="#myModal">ver producto</button>
-  </div>-->
   
-    </div>
-    <div class="modal" id="myModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-    
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title test">Titulo</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-    
-          <!-- Modal body -->
-          <div class="modal-body test">
-            descripccion del produccto
-          </div>
-    
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          </div>
-    
-        </div>
-      </div>
-    </div>
+</div>
+<router-outlet></router-outlet>

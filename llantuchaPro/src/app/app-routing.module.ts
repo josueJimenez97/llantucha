@@ -9,6 +9,8 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { AgregarProductosComponent } from './pages/agregar-productos/agregar-productos.component';
 import { InventarioComponent } from './pages/inventario/inventario.component';
+import { ItemesComponent } from './componentes/itemes/itemes.component';
+import { AgregarItemComponent } from './componentes/agregar-item/agregar-item.component';
 
 const routes: Routes = [
   {
@@ -27,20 +29,40 @@ const routes: Routes = [
   },
   {
       path: 'obraGruesa',
-      component: ObraGruesaComponent
+      component: ObraGruesaComponent,
+      children: [
+        {
+          path: 'itemes',
+          component: ItemesComponent
+        }]
   },
   
   {
     path: 'obraFina',
-    component: ObraFinaComponent
+    component: ObraFinaComponent,
+    children: [
+      {
+        path: 'itemes',
+        component: ItemesComponent
+      }]
   },
   {
     path: 'herramientas',
-    component: HerramientasComponent
+    component: HerramientasComponent,
+    children: [
+      {
+        path: 'itemes',
+        component: ItemesComponent
+      }]
   },
   {
     path: 'maquinaria',
-    component: MaquinariaComponent
+    component: MaquinariaComponent,
+    children: [
+      {
+        path: 'itemes',
+        component: ItemesComponent
+      }]
   },
   {
     path: 'carrito',
@@ -53,6 +75,10 @@ const routes: Routes = [
   {
     path: 'agregarProductos',
     component: AgregarProductosComponent
+  },
+  {
+    path: 'agregarItem',
+    component: AgregarItemComponent
   },
   {
     path: 'inventario',

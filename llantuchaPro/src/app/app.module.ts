@@ -22,6 +22,9 @@ import { ProductosObraGruesaComponent } from './componentes/productos-obra-grues
 import { ProductosPorTipoComponent } from './componentes/productos-por-tipo/productos-por-tipo.component';
 import { AgregarProductosComponent } from './pages/agregar-productos/agregar-productos.component';
 import { InventarioComponent } from './pages/inventario/inventario.component';
+import { ItemesComponent } from './componentes/itemes/itemes.component';
+import { UserComponent } from './pages/user/user.component';
+import { AgregarItemComponent } from './componentes/agregar-item/agregar-item.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { InventarioComponent } from './pages/inventario/inventario.component';
     ProductosObraGruesaComponent,
     ProductosPorTipoComponent,
     AgregarProductosComponent,
-    InventarioComponent
+    InventarioComponent,
+    ItemesComponent,
+    UserComponent,
+    AgregarItemComponent
   ],
   imports: [
     BrowserModule,CommonModule,

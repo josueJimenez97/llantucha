@@ -15,10 +15,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    $(document).ready(() => {
-      console.log("xdxdxd");
-    });
-    
   }
   verOpciones(){
     let opcion:Opcion;
@@ -33,6 +29,7 @@ export class HeaderComponent implements OnInit {
         opcion=new Opcion(obj.user,"",false);
         this.opciones.push(opcion);
         opcion=new Opcion("agregar productos","agregarProductos",true);
+        opcion=new Opcion("agregar itemes","agregarItem",true);
         this.opciones.push(opcion);
         opcion=new Opcion("ver inventario","inventario",true);
         this.opciones.push(opcion);
@@ -56,6 +53,7 @@ export class HeaderComponent implements OnInit {
   }
  
   activo(ruta){
-    return ruta==this.router.url;
+    let rutaAux=this.router.url.substr(0,ruta.length);
+    return ruta==rutaAux;
   }
 }

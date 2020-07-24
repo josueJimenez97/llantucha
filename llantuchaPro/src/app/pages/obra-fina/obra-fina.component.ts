@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PhpServiceService } from 'src/app/services/php-service.service';
 import { Producto } from 'src/app/clases/producto';
+import { Router } from '@angular/router';
 declare var $:any;
 @Component({
   selector: 'app-obra-fina',
@@ -10,8 +11,7 @@ declare var $:any;
 export class ObraFinaComponent implements OnInit {
   productos: Producto[]=[];
   productosVistos=[];
-  productoClick:Producto=new Producto("","","");
-  constructor(private subir:PhpServiceService ) { 
+  constructor(private subir:PhpServiceService,private router:Router) { 
     this.cargarDatosPrueba();
   }
 
@@ -43,7 +43,7 @@ export class ObraFinaComponent implements OnInit {
       this.productosVistos.push(producto.getCantidad());
       sessionStorage.setItem("productosVistos",JSON.stringify(this.productosVistos));
     }
-    this.productoClick=producto;
+    sessionStorage.setItem("producto",JSON.stringify(producto));
   }
 
   existeIdProductoVisto(idProd:number){
@@ -54,5 +54,8 @@ export class ObraFinaComponent implements OnInit {
       }
     }
     return res;
+  }
+  esActivo(ruta){
+    return ruta==this.router.url;
   }
 }
