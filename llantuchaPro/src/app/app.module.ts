@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 // los componentesss
 import {CommonModule} from '@angular/common';
@@ -50,7 +50,8 @@ import { AgregarItemComponent } from './componentes/agregar-item/agregar-item.co
   imports: [
     BrowserModule,CommonModule,
     AppRoutingModule,FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

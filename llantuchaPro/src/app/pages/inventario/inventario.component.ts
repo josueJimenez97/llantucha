@@ -41,4 +41,8 @@ export class InventarioComponent implements OnInit {
       }
     );
   }
+
+  guardarItem(){
+    
+  }
 }

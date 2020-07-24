@@ -8,7 +8,7 @@ import { Producto } from '../clases/producto';
   providedIn: 'root'
 })
 export class PhpServiceService {
-  URL = "http://localhost:80/backendLlantucha/";
+  URL = "http://localhost/backendLlantucha/";
 
   constructor(private http: HttpClient) { }
 

@@ -2,7 +2,8 @@
   <div class="table-responsive">
     <h2>Inventario de Productos</h2>
     <p>filtrar productos xd</p>
-    <button>agregar producto</button>
+    <button class="btn btn-primary float-right m-2" data-toggle="modal" data-target="#agregarItem">agregar
+      producto</button>
     <table class="table align-middle table-hover table-secondary mt-2 table-bordered">
       <thead class="thead-dark">
         <tr class="text-center">
@@ -37,4 +38,54 @@
 
   </div>
 
+</div>
+<div id="agregarItem" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Agregar un item</h4>
+      </div>
+      <div class="modal-body">
+        <form action="#">
+          <div class="form-group px-4">
+            <label for="categoria">categoria</label>
+            <select class="form-control" id="categoria">
+              <option>obra gruesa</option>
+              <option>obra fina</option>
+              <option>herramientas</option>
+              <option>maquinaria</option>
+            </select>
+            <label for="categoria">tipo producto</label>
+            <select class="form-control" id="producto">
+              <option>producto1</option>
+              <option>producto2</option>
+              <option>producto3</option>
+              <option>producto4</option>
+            </select>
+            <div class="form-group px-4">
+              <label for="producto">nombre fabrica</label>
+              <input type="text" class="form-control" id="fabrica">
+            </div>
+            <div class="form-group px-4">
+              <label for="producto">precio</label>
+              <input type="text" class="form-control" id="precio">
+            </div>
+            <div class="form-group px-4">
+              <label for="producto">cantidad</label>
+              <input type="text" class="form-control" id="cantidad">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary mx-4" (click)="guardarItem()">guardar</button>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
 </div>
