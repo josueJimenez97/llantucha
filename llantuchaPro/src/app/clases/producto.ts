@@ -2,13 +2,12 @@ export class Producto{
     private nombre:string;
     private categoria:string;
     private imagen:string;
-    private cantidad: number;
 
-    public constructor(nombre:string,categoria:string,imagen:string,cantidad:number=0){
+
+    public constructor(nombre:string,categoria:string,imagen:string){
         this.nombre=nombre;
         this.categoria=categoria;
         this.imagen=imagen;
-        this.cantidad=cantidad;
     }
 
     public getNombre(){
@@ -21,13 +20,5 @@ export class Producto{
 
     public getImagen(){
         return this.imagen;
-    }
-
-    public getCantidad(){
-        return this.cantidad;
-    }
-
-    public incrementarCantidad(cantidad:number){
-        this.cantidad+=cantidad;
     }
 }

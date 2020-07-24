@@ -7,7 +7,6 @@ import { PhpServiceService } from 'src/app/services/php-service.service';
   styleUrls: ['./obra-gruesa.component.css']
 })
 export class ObraGruesaComponent implements OnInit {
-  tipo= new Producto('','Obra Gruesa','',0);
   productos:Producto[] =[];
   constructor(private phpService:PhpServiceService) {
     //this.cargartipo();
@@ -28,7 +27,7 @@ export class ObraGruesaComponent implements OnInit {
         alert(resp);
         this.productos=[];
         for(let i in resp){
-          this.productos.push(new Producto(resp[i].nombre,resp[i].categoria,resp[i].imagen,resp[i].cantidad));
+          this.productos.push(new Producto(resp[i].nombre,resp[i].categoria,resp[i].imagen));
         }
       }
     );
@@ -36,13 +35,13 @@ export class ObraGruesaComponent implements OnInit {
 
   cargarDatosPrueba(){
     this.productos.push(new Producto("cemento","obra fina",""));
-    
+
     this.productos.push(new Producto("ladrillo","obra fina",""));
     this.productos.push(new Producto("arena","obra fina",""));
     this.productos.push(new Producto("fierro","obra fina",""));
-    
+
     this.productos.push(new Producto("piedra","obra fina",""));
-    
+
     this.productos.push(new Producto("cascajo","obra fina",""));
   }
 }
