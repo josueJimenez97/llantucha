@@ -5,7 +5,7 @@ export class Producto{
     private idCategoria:number;
 
 
-    public constructor(nombre:string,categoria:string,imagen:string,idCategoria:number){
+    public constructor(nombre:string,categoria:string,imagen:string,idCategoria:number=-1){
         this.nombre=nombre;
         this.categoria=categoria;
         this.imagen=imagen;

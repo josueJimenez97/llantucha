@@ -57,10 +57,9 @@ export class AgregarProductosComponent implements OnInit {
     console.log("aqui vamo a guardar el producto");
     let nombrePro=(<HTMLInputElement>document.getElementById("producto")).value;
     console.log(nombrePro);
-    let categoria= (<HTMLInputElement>document.getElementById("categoria")).value;
-    console.log(categoria);
-    console.log(this.imagen);
-    let prod: Producto= new Producto(nombrePro,categoria,this.imagen,1);//siempre enviara a obra gruesa cambiar esto pasar el idcategoria
+    let idCategoria= (<HTMLInputElement>document.getElementById("categoria")).value;
+
+    let prod: Producto= new Producto(nombrePro,"",this.imagen,parseInt(idCategoria));//siempre enviara a obra gruesa cambiar esto pasar el idcategoria
     this.agregarProductoBD(prod);
   }
 
