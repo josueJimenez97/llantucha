@@ -36,7 +36,7 @@ export class ProductosDestacadosComponent implements OnInit {
     this.phpService.getProductos().subscribe(
       resp=>{
         for(let i in resp){
-          this.productos.push(new Producto(resp[i].nombre,resp[i].categoria,resp[i].imagen,resp[i].cantidad));
+          this.productos.push(new Producto(resp[i].nombre,resp[i].categoria,resp[i].imagen));
         }
       }
     );

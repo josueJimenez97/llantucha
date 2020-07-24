@@ -16,11 +16,11 @@ export class AgregarProductosComponent implements OnInit {
   //imagen="assets/img/construccion2.jpg";
   imagen: string = "";
   src: string = "";
-  
+
   constructor(private phpService: PhpServiceService) { }
 
   ngOnInit(): void {
-      
+
   }
 
   subiendo(ev) {
@@ -31,7 +31,7 @@ export class AgregarProductosComponent implements OnInit {
     //laimg.width = 150;
     let img: any = ev.target;
     if (img.files.length > 0) {
-      this.loader = true; 
+      this.loader = true;
       let form = new FormData();
       console.log(img.files[0]);
       form.append('file', img.files[0]);
@@ -60,7 +60,7 @@ export class AgregarProductosComponent implements OnInit {
     let categoria= (<HTMLInputElement>document.getElementById("categoria")).value;
     console.log(categoria);
     console.log(this.imagen);
-    let prod: Producto= new Producto(nombrePro,categoria,this.imagen,0);
+    let prod: Producto= new Producto(nombrePro,categoria,this.imagen);
     this.agregarProductoBD(prod);
   }
 
