@@ -60,7 +60,7 @@ export class AgregarProductosComponent implements OnInit {
     let categoria= (<HTMLInputElement>document.getElementById("categoria")).value;
     console.log(categoria);
     console.log(this.imagen);
-    let prod: Producto= new Producto(nombrePro,categoria,this.imagen);
+    let prod: Producto= new Producto(nombrePro,categoria,this.imagen,1);//siempre enviara a obra gruesa cambiar esto pasar el idcategoria
     this.agregarProductoBD(prod);
   }
 
@@ -79,11 +79,8 @@ export class AgregarProductosComponent implements OnInit {
   agregarProductoBD(prod:Producto){
     this.phpService.agregarProducto(prod).subscribe(
       resp=>{
-        if(resp=='correcto'){
-          alert("todo posi");
-        }else{
-          alert("algo salio mal");
-        }
+        alert(resp);
+
       }
     );
   }
