@@ -30,7 +30,7 @@ export class MaquinariaComponent implements OnInit {
     this.productos.push(new Producto("ginche","obra fina",""));
   }
   eventoClick(producto:Producto){
-    /*if(sessionStorage.getItem("productosVistos")!=null){
+    if(sessionStorage.getItem("productosVistos")!=null){
       console.log(sessionStorage.getItem("productosVistos"));
       this.productosVistos=JSON.parse(sessionStorage.getItem("productosVistos"));
     }else{
@@ -38,10 +38,10 @@ export class MaquinariaComponent implements OnInit {
       
     }
     console.log("se hizo click en el producto "+producto.getNombre());
-    if(!this.existeIdProductoVisto(producto.getCantidad())){
-      this.productosVistos.push(producto.getCantidad());
+    if(!this.existeIdProductoVisto(producto.getIdProducto())){
+      this.productosVistos.push(producto.getIdProducto());
       sessionStorage.setItem("productosVistos",JSON.stringify(this.productosVistos));
-    }*/
+    }
     sessionStorage.setItem("producto",JSON.stringify(producto));
   }
 
@@ -61,7 +61,7 @@ export class MaquinariaComponent implements OnInit {
     this.phpService.getTipoProductos(4).subscribe(
       resp=>{
         for(let i in resp){
-          this.productos.push(new Producto(resp[i].nombre,"",resp[i].imagen,resp[i].idCategoria,resp[i].idProducto));
+          this.productos.push(new Producto(resp[i].nombre,"",resp[i].imagen,resp[i].idCategoria,resp[i].idproducto));
         }
       }
     );

@@ -81,6 +81,8 @@ export class AgregarProductosComponent implements OnInit {
       resp=>{
         if(resp>0){
           alert("el producto se registro correctamente");
+          this.verImagen=false;
+          this.vistaPrevia="vista previa";
         }else{
           alert("ocurrio un error al registrar el producto");
         }
