@@ -16,7 +16,7 @@ export class AgregarProductosComponent implements OnInit {
   //imagen="assets/img/construccion2.jpg";
   imagen: string = "";
   src: string = "";
-
+  nombreProd:string="";
   constructor(private phpService: PhpServiceService) { }
 
   ngOnInit(): void {
@@ -64,6 +64,7 @@ export class AgregarProductosComponent implements OnInit {
   }
 
   enVistaPrevia(){
+    this.nombreProd=(<HTMLInputElement>document.getElementById("producto")).value;
     if(this.verImagen){
       this.verImagen=false;
         this.vistaPrevia="vista previa";
@@ -78,7 +79,11 @@ export class AgregarProductosComponent implements OnInit {
   agregarProductoBD(prod:Producto){
     this.phpService.agregarProducto(prod).subscribe(
       resp=>{
-        alert(resp);
+        if(resp>0){
+          alert("el producto se registro correctamente");
+        }else{
+          alert("ocurrio un error al registrar el producto");
+        }
 
       }
     );

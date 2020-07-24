@@ -62,7 +62,7 @@ export class HerramientasComponent implements OnInit {
   }
 
   getProductosTipoBD(){
-    this.phpService.getTipoProductos(4).subscribe(
+    this.phpService.getTipoProductos(3).subscribe(
       resp=>{
         for(let i in resp){
           this.productos.push(new Producto(resp[i].nombre,"",resp[i].imagen,resp[i].idCategoria,resp[i].idProducto));
