@@ -1,18 +1,22 @@
 export class Item{
-    private nombre:string;
+    private nombrePro:string;
+    private fabrica:string;
+    private idProducto:number;
     private cantidad:number;
     private precio;
 
-    public constructor(nombre,cantidad,precio){
-        this.nombre=nombre;
+    public constructor(nombrePro,cantidad,precio,fabrica,idProducto){
+        this.nombrePro=nombrePro;
+        this.fabrica=fabrica;
+        this.idProducto=idProducto;
         this.cantidad=cantidad;
         this.precio=precio;
     }
-    public getNombre(){
-        return this.nombre;
+    public getNombrePro(){
+        return this.nombrePro;
     }
-    public setNombre(value){
-        this.nombre=value;
+    public setNombrePro(value){
+        this.nombrePro=value;
     }
     public getCantidad(){
         return this.cantidad;
@@ -25,5 +29,12 @@ export class Item{
     }
     public setPrecio(value){
         this.precio=this.precio;
+    }
+
+    public getFabrica(){
+        return this.fabrica;
+    }
+    public setFabrica(value){
+        this.fabrica=value;
     }
 }

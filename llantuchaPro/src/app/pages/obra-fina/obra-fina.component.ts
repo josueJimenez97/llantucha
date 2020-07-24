@@ -11,8 +11,9 @@ declare var $:any;
 export class ObraFinaComponent implements OnInit {
   productos: Producto[]=[];
   productosVistos=[];
-  constructor(private subir:PhpServiceService,private router:Router) { 
-    this.cargarDatosPrueba();
+  constructor(private phpService:PhpServiceService,private router:Router) { 
+    //this.cargarDatosPrueba();
+    this.getProductosTipoBD();
   }
 
   ngOnInit(): void {
@@ -57,5 +58,14 @@ export class ObraFinaComponent implements OnInit {
   }
   esActivo(ruta){
     return ruta==this.router.url;
+  }
+  getProductosTipoBD(){
+    this.phpService.getTipoProductos(2).subscribe(
+      resp=>{
+        for(let i in resp){
+          this.productos.push(new Producto(resp[i].nombre,"",resp[i].imagen,resp[i].idCategoria,resp[i].idProducto));
+        }
+      }
+    );
   }
 }

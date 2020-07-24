@@ -3,13 +3,15 @@
     <h2>Inventario de Productos</h2>
     <p>filtrar productos xd</p>
     <button class="btn btn-primary float-right m-2" data-toggle="modal" data-target="#agregarItem">agregar
-      producto</button>
+      item</button>
     <table class="table align-middle table-hover table-secondary mt-2 table-bordered">
       <thead class="thead-dark">
         <tr class="text-center">
-          <th>nombre</th>
+          <th>nombre Producto</th>
           <th>categoria</th>
+          <th>fabrica</th>
           <th>cantidad</th>
+          <th>precio</th>
           <th>acciones</th>
         </tr>
       </thead>
@@ -51,39 +53,41 @@
         <form action="#">
           <div class="form-group px-4">
             <label for="categoria">categoria</label>
-            <select class="form-control" id="categoria">
-              <option>obra gruesa</option>
-              <option>obra fina</option>
-              <option>herramientas</option>
-              <option>maquinaria</option>
+            <select class="form-control" id="categoria" (click)="seleccionoCategoria()">
+              <option selected disabled value="porDefecto"> Seleccione una categoria</option>
+              <option value="1">obra gruesa</option>
+              <option value="2">obra fina</option>
+              <option value="3">herramientas</option>
+              <option value="4">maquinaria</option>
             </select>
-            <label for="categoria">tipo producto</label>
-            <select class="form-control" id="producto">
-              <option>producto1</option>
-              <option>producto2</option>
-              <option>producto3</option>
-              <option>producto4</option>
-            </select>
-            <div class="form-group px-4">
-              <label for="producto">nombre fabrica</label>
-              <input type="text" class="form-control" id="fabrica">
-            </div>
-            <div class="form-group px-4">
-              <label for="producto">precio</label>
-              <input type="text" class="form-control" id="precio">
-            </div>
-            <div class="form-group px-4">
-              <label for="producto">cantidad</label>
-              <input type="text" class="form-control" id="cantidad">
-            </div>
           </div>
-
-          <button type="submit" class="btn btn-primary mx-4" (click)="guardarItem()">guardar</button>
+          <div class="form-group px-4">
+            <label for="producto">tipo producto</label>
+            <select class="custom-select" id="producto" >
+              <option selected disabled value="porDefecto"> Seleccione un producto</option>
+              <ng-container *ngFor="let prod of productosDisp; let i = index">
+                <option value="{{prod.getIdProducto()}}">{{prod.getNombre()}}</option>
+              </ng-container>
+            </select>
+          </div>
+          <div class="form-group px-4">
+            <label for="fabrica">nombre fabrica</label>
+            <input type="text" class="form-control" id="fabrica">
+          </div>
+          <div class="form-group px-4">
+            <label for="precio">precio</label>
+            <input type="text" class="form-control" id="precio">
+          </div>
+          <div class="form-group px-4">
+            <label for="cantidad">cantidad</label>
+            <input type="text" class="form-control" id="cantidad">
+          </div>
         </form>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary mx-2" (click)="guardarItem()">guardar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
 

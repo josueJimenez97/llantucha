@@ -10,7 +10,6 @@ import { LoginComponent } from './componentes/login/login.component';
 import { AgregarProductosComponent } from './pages/agregar-productos/agregar-productos.component';
 import { InventarioComponent } from './pages/inventario/inventario.component';
 import { ItemesComponent } from './componentes/itemes/itemes.component';
-import { AgregarItemComponent } from './componentes/agregar-item/agregar-item.component';
 
 const routes: Routes = [
   {
@@ -76,10 +75,7 @@ const routes: Routes = [
     path: 'agregarProductos',
     component: AgregarProductosComponent
   },
-  {
-    path: 'agregarItem',
-    component: AgregarItemComponent
-  },
+  
   {
     path: 'inventario',
     component: InventarioComponent

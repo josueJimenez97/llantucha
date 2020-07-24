@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Producto } from 'src/app/clases/producto';
 import { Router } from '@angular/router';
+import { PhpServiceService } from 'src/app/services/php-service.service';
 
 @Component({
   selector: 'app-herramientas',
@@ -10,8 +11,9 @@ import { Router } from '@angular/router';
 export class HerramientasComponent implements OnInit {
   productos:Producto[]=[];
   productosVistos=[]; 
-  constructor(private router: Router) {
-   this.cargarDatosPrueba(); 
+  constructor(private router: Router,private phpService:PhpServiceService) {
+   //this.cargarDatosPrueba(); 
+   this.getProductosTipoBD();
   }
 
   ngOnInit(): void {
@@ -57,5 +59,15 @@ export class HerramientasComponent implements OnInit {
 
   esActivo(ruta){
     return ruta==this.router.url;
+  }
+
+  getProductosTipoBD(){
+    this.phpService.getTipoProductos(4).subscribe(
+      resp=>{
+        for(let i in resp){
+          this.productos.push(new Producto(resp[i].nombre,"",resp[i].imagen,resp[i].idCategoria,resp[i].idProducto));
+        }
+      }
+    );
   }
 }

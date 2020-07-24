@@ -30,8 +30,6 @@ export class HeaderComponent implements OnInit {
         this.opciones.push(opcion);
         opcion=new Opcion("agregar productos","agregarProductos",true);
         this.opciones.push(opcion);
-        opcion=new Opcion("agregar itemes","agregarItem",true);
-        this.opciones.push(opcion);
         opcion=new Opcion("ver inventario","inventario",true);
         this.opciones.push(opcion);
         opcion=new Opcion("cerrar sesion","inicio",true);

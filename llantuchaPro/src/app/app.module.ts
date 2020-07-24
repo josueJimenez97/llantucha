@@ -24,7 +24,6 @@ import { AgregarProductosComponent } from './pages/agregar-productos/agregar-pro
 import { InventarioComponent } from './pages/inventario/inventario.component';
 import { ItemesComponent } from './componentes/itemes/itemes.component';
 import { UserComponent } from './pages/user/user.component';
-import { AgregarItemComponent } from './componentes/agregar-item/agregar-item.component';
 
 @NgModule({
   declarations: [
@@ -44,8 +43,7 @@ import { AgregarItemComponent } from './componentes/agregar-item/agregar-item.co
     AgregarProductosComponent,
     InventarioComponent,
     ItemesComponent,
-    UserComponent,
-    AgregarItemComponent
+    UserComponent
   ],
   imports: [
     BrowserModule,CommonModule,
