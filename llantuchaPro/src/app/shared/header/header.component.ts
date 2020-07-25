@@ -15,7 +15,9 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
+    let miDate= new Date();
+    sessionStorage.setItem("hraIngreso",miDate.getHours()+":"+miDate.getMinutes()+":"+miDate.getSeconds());
+     }
   verOpciones(){
     let opcion:Opcion;
     this.opciones=[];
