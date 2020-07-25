@@ -1,6 +1,0 @@
-rastrear si copio o descargo la imagen de un producto --->sabo
-rastrear si copio o descargo el texto de un producto ---->sabo
-que productos ven con el click ---->sabo
-que productos ven con el mouse over
-el tiempo en que un usuario ve un producto/pagina
-guardar las busquedas que hace el usuario
