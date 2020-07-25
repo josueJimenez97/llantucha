@@ -1,0 +1,36 @@
+En UNIX.
+-cd ~
+-git clone https://github.com/josueJimenez97/llantucha.git
+Instalar Angular versión 9.1.4
+-nodejs
+-npm install -g @angular/cli
+
+Instalar Postgres version  10 
+Instalar PgAdmin4
+-sudo apt update
+-sudo apt install postgresql postgresql-contrib
+Instala XAMPP7.2
+
+Hacer el siguiente comando en la carpeta htdocs del xampp:
+-git clone “https://github.com/josueJimenez97/backendLlantucha.git” 
+
+
+Habilitar APACHE en xampp(Linux)
+-sudo service apache2 stop
+-cd /opt/lampp
+-sudo ./manager-linux-x64.run
+
+Crear una base de datos en postgres y restaurar el backupLlantucha con ayuda de pgAdmin 4 de postgres 10. De la carpeta backup que se encuentra en el directorio llantucha/backup  
+
+En el archivo backendLlantucha/config.php se debe cambiar por la configuración de la base de datos propia(usuario,contraseña,etc.).
+
+Todo listo dentro del directorio /llantucha/llantuchaPro.
+-npm install 
+-ng server
+
+
+
+
+
+ 
+ 
